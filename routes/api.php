@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+Route::middleware('auth')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/cities', [App\Http\Controllers\IndonesiaAdministrationController::class,'getCity'])->middleware(['auth','verified'])->name('cities');
+Route::post('/districts', [App\Http\Controllers\IndonesiaAdministrationController::class,'getDistrict'])->middleware(['auth','verified'])->name('districts');
+Route::post('/villages', [App\Http\Controllers\IndonesiaAdministrationController::class,'getVillage'])->middleware(['auth','verified'])->name('villages');

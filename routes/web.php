@@ -43,4 +43,4 @@ Auth::routes(['verify' => true]);
 /**
  * Application routes
  */
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware(['auth'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware(['auth','verified'])->name('home');

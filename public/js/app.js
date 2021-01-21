@@ -305,6 +305,16 @@ eval("\n\nvar bind = __webpack_require__(/*! ./helpers/bind */ \"./node_modules/
 
 /***/ }),
 
+/***/ "./public/js/base.js":
+/*!***************************!*\
+  !*** ./public/js/base.js ***!
+  \***************************/
+/***/ (() => {
+
+eval("// Hide submenus\n$('#body-row .collapse').collapse('hide'); // Collapse/Expand icon\n\n$('#collapse-icon').addClass('fa-angle-double-left'); // Collapse click\n\n$('[data-toggle=sidebar-colapse]').click(function () {\n  SidebarCollapse();\n});\n\nfunction SidebarCollapse() {\n  $('.menu-collapsed').toggleClass('d-none');\n  $('.sidebar-submenu').toggleClass('d-none');\n  $('.submenu-icon').toggleClass('d-none');\n  $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed'); // Treating d-flex/d-none on separators with title\n\n  var SeparatorTitle = $('.sidebar-separator-title');\n\n  if (SeparatorTitle.hasClass('d-flex')) {\n    SeparatorTitle.removeClass('d-flex');\n  } else {\n    SeparatorTitle.addClass('d-flex');\n  } // Collapse/Expand icon\n\n\n  $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9wdWJsaWMvanMvYmFzZS5qcz9lNGE0Il0sIm5hbWVzIjpbIiQiLCJjb2xsYXBzZSIsImFkZENsYXNzIiwiY2xpY2siLCJTaWRlYmFyQ29sbGFwc2UiLCJ0b2dnbGVDbGFzcyIsIlNlcGFyYXRvclRpdGxlIiwiaGFzQ2xhc3MiLCJyZW1vdmVDbGFzcyJdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQUEsQ0FBQyxDQUFDLHFCQUFELENBQUQsQ0FBeUJDLFFBQXpCLENBQWtDLE1BQWxDLEUsQ0FFQTs7QUFDQUQsQ0FBQyxDQUFDLGdCQUFELENBQUQsQ0FBb0JFLFFBQXBCLENBQTZCLHNCQUE3QixFLENBRUE7O0FBQ0FGLENBQUMsQ0FBQywrQkFBRCxDQUFELENBQW1DRyxLQUFuQyxDQUF5QyxZQUFXO0FBQ2hEQyxFQUFBQSxlQUFlO0FBQ2xCLENBRkQ7O0FBSUEsU0FBU0EsZUFBVCxHQUE0QjtBQUN4QkosRUFBQUEsQ0FBQyxDQUFDLGlCQUFELENBQUQsQ0FBcUJLLFdBQXJCLENBQWlDLFFBQWpDO0FBQ0FMLEVBQUFBLENBQUMsQ0FBQyxrQkFBRCxDQUFELENBQXNCSyxXQUF0QixDQUFrQyxRQUFsQztBQUNBTCxFQUFBQSxDQUFDLENBQUMsZUFBRCxDQUFELENBQW1CSyxXQUFuQixDQUErQixRQUEvQjtBQUNBTCxFQUFBQSxDQUFDLENBQUMsb0JBQUQsQ0FBRCxDQUF3QkssV0FBeEIsQ0FBb0Msb0NBQXBDLEVBSndCLENBTXhCOztBQUNBLE1BQUlDLGNBQWMsR0FBR04sQ0FBQyxDQUFDLDBCQUFELENBQXRCOztBQUNBLE1BQUtNLGNBQWMsQ0FBQ0MsUUFBZixDQUF3QixRQUF4QixDQUFMLEVBQXlDO0FBQ3JDRCxJQUFBQSxjQUFjLENBQUNFLFdBQWYsQ0FBMkIsUUFBM0I7QUFDSCxHQUZELE1BRU87QUFDSEYsSUFBQUEsY0FBYyxDQUFDSixRQUFmLENBQXdCLFFBQXhCO0FBQ0gsR0FadUIsQ0FjeEI7OztBQUNBRixFQUFBQSxDQUFDLENBQUMsZ0JBQUQsQ0FBRCxDQUFvQkssV0FBcEIsQ0FBZ0MsNENBQWhDO0FBQ0giLCJzb3VyY2VzQ29udGVudCI6WyIvLyBIaWRlIHN1Ym1lbnVzXG4kKCcjYm9keS1yb3cgLmNvbGxhcHNlJykuY29sbGFwc2UoJ2hpZGUnKTsgXG5cbi8vIENvbGxhcHNlL0V4cGFuZCBpY29uXG4kKCcjY29sbGFwc2UtaWNvbicpLmFkZENsYXNzKCdmYS1hbmdsZS1kb3VibGUtbGVmdCcpOyBcblxuLy8gQ29sbGFwc2UgY2xpY2tcbiQoJ1tkYXRhLXRvZ2dsZT1zaWRlYmFyLWNvbGFwc2VdJykuY2xpY2soZnVuY3Rpb24oKSB7XG4gICAgU2lkZWJhckNvbGxhcHNlKCk7XG59KTtcblxuZnVuY3Rpb24gU2lkZWJhckNvbGxhcHNlICgpIHtcbiAgICAkKCcubWVudS1jb2xsYXBzZWQnKS50b2dnbGVDbGFzcygnZC1ub25lJyk7XG4gICAgJCgnLnNpZGViYXItc3VibWVudScpLnRvZ2dsZUNsYXNzKCdkLW5vbmUnKTtcbiAgICAkKCcuc3VibWVudS1pY29uJykudG9nZ2xlQ2xhc3MoJ2Qtbm9uZScpO1xuICAgICQoJyNzaWRlYmFyLWNvbnRhaW5lcicpLnRvZ2dsZUNsYXNzKCdzaWRlYmFyLWV4cGFuZGVkIHNpZGViYXItY29sbGFwc2VkJyk7XG4gICAgXG4gICAgLy8gVHJlYXRpbmcgZC1mbGV4L2Qtbm9uZSBvbiBzZXBhcmF0b3JzIHdpdGggdGl0bGVcbiAgICB2YXIgU2VwYXJhdG9yVGl0bGUgPSAkKCcuc2lkZWJhci1zZXBhcmF0b3ItdGl0bGUnKTtcbiAgICBpZiAoIFNlcGFyYXRvclRpdGxlLmhhc0NsYXNzKCdkLWZsZXgnKSApIHtcbiAgICAgICAgU2VwYXJhdG9yVGl0bGUucmVtb3ZlQ2xhc3MoJ2QtZmxleCcpO1xuICAgIH0gZWxzZSB7XG4gICAgICAgIFNlcGFyYXRvclRpdGxlLmFkZENsYXNzKCdkLWZsZXgnKTtcbiAgICB9XG4gICAgXG4gICAgLy8gQ29sbGFwc2UvRXhwYW5kIGljb25cbiAgICAkKCcjY29sbGFwc2UtaWNvbicpLnRvZ2dsZUNsYXNzKCdmYS1hbmdsZS1kb3VibGUtbGVmdCBmYS1hbmdsZS1kb3VibGUtcmlnaHQnKTtcbn0iXSwiZmlsZSI6Ii4vcHVibGljL2pzL2Jhc2UuanMuanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./public/js/base.js\n");
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -484,6 +494,7 @@ eval("// shim for using process in browser\nvar process = module.exports = {};\n
 /******/ 		
 /******/ 		var deferredModules = [
 /******/ 			["./resources/js/app.js"],
+/******/ 			["./public/js/base.js"],
 /******/ 			["./resources/sass/app.scss"]
 /******/ 		];
 /******/ 		// no chunk on demand loading

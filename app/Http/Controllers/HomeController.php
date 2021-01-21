@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Laravolt\Indonesia\Models\Province;
+use Laravolt\Indonesia\Models\City;
 
 class HomeController extends Controller
 {
@@ -13,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth','verified');
+        $this->middleware(['auth','verified']);
     }
 
     /**
@@ -23,6 +25,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+       $provinces = Province::pluck('name', 'id');
+       $cities = City::pluck('name', 'id');
+
+        return view('home',['provinces'=>$provinces, 'cities'=>$cities]);
     }
+    
+    
 }
