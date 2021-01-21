@@ -17,19 +17,19 @@
             <div class="col-md">
                 <div class="mb-3">
                     <label for="nama-lengkap" class="form-label">Nama Lengkap</label>
-                    <input class="form-control" type="text" value="{{Auth::user()->name}}" name="nama" placeholder="Disabled readonly input" aria-label="Disabled input example" disabled readonly>
+                    <input class="form-control" type="text" value="{{Auth::user()->name}}" id="nama" name="nama" placeholder="Disabled readonly input" aria-label="Disabled input example" disabled readonly>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email address</label>
-                    <input class="form-control" type="text" value="{{Auth::user()->email}}" name="email" placeholder="Disabled readonly input" aria-label="Disabled input example" disabled readonly>
+                    <input class="form-control" type="text" value="{{Auth::user()->email}}" id="email" name="email" placeholder="Disabled readonly input" aria-label="Disabled input example" disabled readonly>
                 </div>
                 <div class="mb-3">
                     <label for="telepon" class="form-label">Telepon</label>
-                    <input class="form-control" type="text" name="tlp">
+                    <input class="form-control" type="text" name="tlp" id="telp">
                 </div>
                 <label for="tempat-lahir" class="form-label">Tempat Lahir</label>
                 <div class="mb-3">                    
-                     <select class="form-select form-select-lg mb-3" id="birthplace" name="tmp_lahir" aria-label=".form-select-lg example">
+                     <select class="form-select form-select-lg mb-3" id="birthplace" id="tmp_lahir" name="tmp_lahir" aria-label=".form-select-lg example">
                         <option selected>Open this select menu</option>
                        @foreach ($cities as $id => $name)
                             <option value="{{ $id }}">{{ $name }}</option>
@@ -38,18 +38,18 @@
                 </div>
                 <div class="mb-3">
                     <label for="tanggal-lahir" class="form-label">Tanggal Lahir</label>
-                    <input class="form-control" type="text" name="tgl_lahir">
+                    <input class="form-control" type="text" name="tgl_lahir" id="tgl_lahir">
                 </div>
                 <p>Jenis Kelamin</p>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
+                    <input class="form-check-input" type="radio" name="jenis_kelamin" id="laki-laki" value="laki-laki">
+                    <label class="form-check-label" for="laki-laki">
                         Laki-laki
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                    <label class="form-check-label" for="flexRadioDefault2">
+                    <input class="form-check-input" type="radio" name="jenis_kelamin" id="perempuan" value="perempuan" checked>
+                    <label class="form-check-label" for="perempuan">
                         Perempuan
                     </label>
                 </div>                   
@@ -57,7 +57,7 @@
             <div class="col-md">                           
                 <div class="mb-3">
                     <label for="address" class="form-label">Alamat</label>
-                    <textarea class="form-control" id="address" rows="3"></textarea>
+                    <textarea class="form-control" id="alamat" name="alamant" rows="3"></textarea>
                 </div>
                 <p>Provinsi</p>
                 <div class="mb-3">
@@ -96,34 +96,34 @@
                     </select>
                 </div>       
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Kode Pos</label>
-                    <input class="form-control" type="text">
+                    <label for="kode-pos" class="form-label">Kode Pos</label>
+                    <input class="form-control" type="text" name="kode-pos" id="kode-pos"> 
                 </div>                 
             </div>
             <div class="col-md">     
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Nomor KTP</label>
-                    <input class="form-control" type="text">
+                    <label for="idktp" class="form-label">Nomor KTP</label>
+                    <input class="form-control" type="text" name="idktp" id="idktp">
                 </div>          
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Nomor NPWP</label>
-                    <input class="form-control" type="text">
+                    <label for="npwp" class="form-label">Nomor NPWP</label>
+                    <input class="form-control" type="text" name="npwp" id="npwp">
                 </div>          
                 <div class="mb-3">
                     <label class="form-label" for="fotoktp">Foto KTP</label>
-                        <input class="form-control" type="file" id="formFile">
+                        <input class="form-control" type="file" id="fotoktp" name="fotoktp">
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="fotodiri">Foto DIRI</label>
-                    <input class="form-control" type="file" id="formFile">
+                    <input class="form-control" type="file" id="fotodiri" name="fotodiri">
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="fotottd">Foto TTD</label>
-                    <input class="form-control" type="file" id="formFile">
+                    <input class="form-control" type="file" id="ttd" name="ttd">
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="fotonpwp">Foto NPWP</label>
-                    <input class="form-control" type="file" id="formFile">
+                    <input class="form-control" type="file" id="fotonpwp" name="fotonpwp">
                 </div>                         
             </div>
         </div>
